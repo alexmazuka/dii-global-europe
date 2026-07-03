@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DII-Global Europe — Independent Media &amp; Information-Integrity NGO · Brussels</title>
+<meta name="description" content="DII-Global Europe is a Brussels-based non-profit (VZW/ASBL) working on information integrity, independent journalism and countering foreign information manipulation across the transatlantic space. Chaired by Vitaliy Sizov.">
+<meta name="author" content="DII-Global Europe">
+<meta property="og:type" content="website">
+<meta property="og:title" content="DII-Global Europe — Information Integrity for the Transatlantic Space">
+<meta property="og:description" content="A Brussels-based non-profit for independent journalism and information integrity. Home of the Transatlantic Truth Lab.">
+<meta property="og:image" content="assets/img/briefing-room.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%230a2540'/%3E%3Ctext x='50' y='68' font-size='52' font-family='Segoe UI,Arial' font-weight='700' text-anchor='middle' fill='%23c8a951'%3ED%3C/text%3E%3C/svg%3E">
+<style>
+:root{
+  --navy:#0a2540; --blue:#1f4e79; --accent:#2e6fb8; --red:#b22234; --gold:#c8a951; --green:#1d7a4d;
+  --bg:#f7f9fc; --card:#ffffff; --ink:#1a2330; --muted:#5a6779; --line:#e2e8f2;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Georgia,'Times New Roman',serif;color:var(--ink);background:var(--bg);line-height:1.65}
+h1,h2,h3,h4,nav,.tag,.btn,.stat-num,.kicker,.kicker2,.brand,.chip{font-family:'Segoe UI',Helvetica,Arial,sans-serif}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%;display:block}
+.wrap{max-width:1000px;margin:0 auto;padding:0 22px}
+
+/* header */
+header.top{position:sticky;top:0;z-index:30;background:rgba(10,37,64,.97);backdrop-filter:blur(6px)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+header.top .brand{color:#fff;font-weight:700;font-size:1.04rem;letter-spacing:.3px}
+header.top .brand span{color:var(--gold)}
+nav.main{display:flex;align-items:center}
+nav.main a{color:#cfdcec;margin-left:22px;font-size:.82rem;text-transform:uppercase;letter-spacing:.6px}
+nav.main a:hover{color:#fff;text-decoration:none}
+nav.main a.pill{border:1px solid rgba(200,169,81,.55);color:var(--gold);padding:6px 12px;border-radius:30px}
+nav.main a.pill:hover{background:var(--gold);color:var(--navy)}
+.burger{display:none;background:none;border:0;color:#fff;font-size:1.5rem;cursor:pointer}
+@media(max-width:760px){
+  nav.main{position:absolute;top:62px;left:0;right:0;flex-direction:column;align-items:flex-start;background:var(--navy);padding:8px 22px 18px;display:none}
+  nav.main.open{display:flex}
+  nav.main a{margin:9px 0;font-size:.92rem}
+  .burger{display:block}
+}
+
+/* hero */
+.hero{background:linear-gradient(135deg,#0a2540 0%,#1f4e79 68%,#2e6fb8 100%);color:#fff;padding:78px 0 66px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border:1px solid rgba(255,255,255,.12);border-radius:50%;box-shadow:0 0 0 60px rgba(255,255,255,.04)}
+.hero .wrap{position:relative;z-index:2}
+.kicker{display:inline-block;font-size:.72rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);border:1px solid rgba(200,169,81,.5);padding:5px 12px;border-radius:30px;margin-bottom:20px}
+.hero h1{font-size:2.7rem;line-height:1.12;font-weight:800;margin-bottom:18px;max-width:830px}
+.hero p.lede{font-size:1.18rem;color:#dde8f4;max-width:740px}
+.hero .btns{margin-top:32px}
+.btn{display:inline-block;background:var(--gold);color:#0a2540;font-weight:700;padding:12px 22px;border-radius:6px;font-size:.9rem;margin:0 12px 12px 0}
+.btn.ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.45)}
+.btn:hover{text-decoration:none;opacity:.92}
+.hero .meta{margin-top:26px;font-family:'Segoe UI',sans-serif;font-size:.8rem;color:#9fb6d4;letter-spacing:.4px}
+
+/* sections */
+section{padding:60px 0}
+section.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.kicker2{text-transform:uppercase;letter-spacing:2px;font-size:.74rem;color:var(--accent);font-weight:700;margin-bottom:10px}
+h2.sec{font-size:2rem;color:var(--navy);margin-bottom:14px;font-weight:800;font-family:'Segoe UI',sans-serif;line-height:1.15}
+p.intro{font-size:1.07rem;color:var(--muted);max-width:770px;margin-bottom:8px}
+
+/* focus cards */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+.card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:8px;padding:22px}
+.card h3{font-family:'Segoe UI',sans-serif;font-size:1.08rem;color:var(--navy);margin-bottom:8px}
+.card p{font-size:.98rem;color:var(--muted)}
+.card .ico{font-size:1.5rem;margin-bottom:10px}
+.card:nth-child(2){border-top-color:var(--gold)}
+.card:nth-child(3){border-top-color:var(--green)}
+
+/* flagship */
+.flag{display:grid;grid-template-columns:1.15fr 1fr;gap:30px;align-items:center}
+.flag .panel{background:linear-gradient(135deg,#0a2540,#1f4e79);color:#fff;border-radius:10px;padding:30px}
+.flag .panel .chip{display:inline-block;background:rgba(200,169,81,.18);color:var(--gold);font-size:.72rem;letter-spacing:1.5px;text-transform:uppercase;padding:5px 11px;border-radius:20px;margin-bottom:14px;font-weight:700}
+.flag .panel h3{font-family:'Segoe UI',sans-serif;font-size:1.5rem;margin-bottom:12px}
+.flag .panel p{color:#dbe7f4;font-size:1rem;margin-bottom:18px}
+.flag ul{list-style:none;margin:18px 0 0}
+.flag ul li{padding:8px 0 8px 26px;position:relative;color:var(--ink);font-size:.98rem;border-bottom:1px solid var(--line)}
+.flag ul li:before{content:"→";position:absolute;left:0;color:var(--accent);font-weight:700}
+.flag ul li:last-child{border-bottom:0}
+
+/* blog */
+.post{display:grid;grid-template-columns:1fr 1fr;gap:0;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.post .thumb{background:#0a2540 center/cover no-repeat;min-height:320px}
+.post .body{padding:32px}
+.post .date{font-family:'Segoe UI',sans-serif;font-size:.76rem;text-transform:uppercase;letter-spacing:1.4px;color:var(--accent);font-weight:700;margin-bottom:10px}
+.post h3{font-family:'Segoe UI',sans-serif;font-size:1.4rem;color:var(--navy);margin-bottom:12px;line-height:1.25}
+.post p{color:var(--muted);font-size:1rem;margin-bottom:16px}
+
+/* leadership */
+.lead{display:flex;gap:22px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:26px;max-width:760px}
+.lead .avatar{flex:0 0 84px;width:84px;height:84px;border-radius:50%;background:var(--navy) center/cover no-repeat;display:flex;align-items:center;justify-content:center;color:var(--gold);font-family:'Segoe UI',sans-serif;font-weight:700;font-size:1.6rem}
+.lead h3{font-family:'Segoe UI',sans-serif;color:var(--navy);font-size:1.2rem}
+.lead .role{font-family:'Segoe UI',sans-serif;color:var(--accent);font-size:.86rem;font-weight:600;margin:2px 0 10px;text-transform:uppercase;letter-spacing:.6px}
+.lead p{color:var(--muted);font-size:.98rem}
+
+/* contact */
+#contact{background:linear-gradient(180deg,#0a2540,#12385f);color:#fff}
+#contact h2.sec{color:#fff}
+#contact .kicker2{color:var(--gold)}
+#contact p.intro{color:#c6d6e9}
+.contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:34px;margin-top:34px;align-items:start}
+.cinfo p{margin-bottom:16px;color:#dbe7f4;font-size:.98rem}
+.cinfo .lbl{font-family:'Segoe UI',sans-serif;text-transform:uppercase;letter-spacing:1px;font-size:.72rem;color:var(--gold);display:block;margin-bottom:3px}
+form{background:#fff;border-radius:10px;padding:26px}
+form label{display:block;font-family:'Segoe UI',sans-serif;font-size:.8rem;font-weight:600;color:var(--navy);text-transform:uppercase;letter-spacing:.5px;margin:0 0 6px}
+form input,form textarea{width:100%;padding:11px 13px;border:1px solid var(--line);border-radius:6px;font-family:'Segoe UI',sans-serif;font-size:.95rem;color:var(--ink);background:#fbfcfe;margin-bottom:16px}
+form input:focus,form textarea:focus{outline:none;border-color:var(--accent);background:#fff}
+form textarea{min-height:130px;resize:vertical}
+form button{background:var(--gold);color:var(--navy);font-family:'Segoe UI',sans-serif;font-weight:700;border:0;padding:13px 26px;border-radius:6px;font-size:.95rem;cursor:pointer;width:100%}
+form button:hover{opacity:.92}
+.form-note{font-family:'Segoe UI',sans-serif;font-size:.78rem;color:var(--muted);margin-top:12px;text-align:center}
+.form-status{display:none;font-family:'Segoe UI',sans-serif;padding:11px 14px;border-radius:6px;margin-bottom:16px;font-size:.9rem}
+.form-status.ok{display:block;background:#e7f5ee;color:#1d7a4d;border:1px solid #b6e0c8}
+.form-status.err{display:block;background:#fdeaec;color:#b22234;border:1px solid #f2c2c8}
+
+/* footer */
+footer{background:#081d31;color:#9fb6d4;font-family:'Segoe UI',sans-serif;font-size:.86rem;padding:44px 0 30px}
+footer .fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:26px}
+footer h4{color:#fff;font-size:.8rem;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px}
+footer a{color:#bcd0e8}
+footer .brand-f{color:#fff;font-weight:700;font-size:1.1rem;margin-bottom:10px}
+footer .brand-f span{color:var(--gold)}
+footer p{margin-bottom:8px;line-height:1.6}
+footer .legal{border-top:1px solid rgba(255,255,255,.12);margin-top:30px;padding-top:18px;font-size:.78rem;color:#7d93b0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+
+@media(max-width:820px){
+  .flag,.post,.contact-grid,footer .fgrid{grid-template-columns:1fr}
+  .grid3{grid-template-columns:1fr}
+  .hero h1{font-size:2.1rem}
+  .post .thumb{min-height:230px}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand">DII<span>·</span>Global Europe</div>
+    <button class="burger" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+    <nav class="main" id="nav">
+      <a href="#about">About</a>
+      <a href="#focus">Focus</a>
+      <a href="#flagship">Programs</a>
+      <a href="#insights">Insights</a>
+      <a href="#contact">Contact</a>
+      <a class="pill" href="https://alexmazuka.github.io/transatlantic-truth-lab/" target="_blank" rel="noopener">Truth Lab ↗</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="kicker">Independent Non-Profit · Brussels, EU</span>
+    <h1>Defending information integrity across the transatlantic space.</h1>
+    <p class="lede">DII-Global Europe is a Brussels-based non-profit continuing two decades of independent journalism from the Donetsk Institute of Information. We monitor foreign information manipulation, publish verified research, and convene the people who need the facts.</p>
+    <div class="btns">
+      <a class="btn" href="#flagship">Explore our work</a>
+      <a class="btn ghost" href="#contact">Get in touch</a>
+    </div>
+    <div class="meta">VZW / ASBL · Rue Godecharle 8, 1000 Ixelles, Brussels · Enterprise No. 1000&nbsp;847&nbsp;483</div>
+  </div>
+</section>
+
+<section id="about" class="alt">
+  <div class="wrap">
+    <div class="kicker2">Who we are</div>
+    <h2 class="sec">A European home for independent, evidence-based reporting.</h2>
+    <p class="intro">DII-Global Europe (<em>Vereniging zonder winstoogmerk</em> / <em>Association sans but lucratif</em>) is the European continuation of the Donetsk Institute of Information — an organisation that has produced independent media, trained journalists and documented the war against Ukraine since 2009. Registered in Belgium in 2024, we now bring that experience to the heart of the European Union.</p>
+    <p class="intro" style="margin-top:14px">Our work sits at the intersection of journalism, open-source research and public policy. We believe that in an era of industrial-scale disinformation, accurate, well-sourced information is a form of security — for democracies, for alliances, and for the people who defend them.</p>
+  </div>
+</section>
+
+<section id="focus">
+  <div class="wrap">
+    <div class="kicker2">What we do</div>
+    <h2 class="sec">Three lines of work.</h2>
+    <p class="intro">We keep the toolkit small and the standards high: monitor what is being manipulated, answer it with verified facts, and bring the right audiences into the room.</p>
+    <div class="grid3">
+      <div class="card">
+        <div class="ico">🛰️</div>
+        <h3>Monitor</h3>
+        <p>We track foreign information manipulation and disinformation targeting Ukraine, the EU and the transatlantic relationship, using open-source methods.</p>
+      </div>
+      <div class="card">
+        <div class="ico">📑</div>
+        <h3>Research &amp; Rebut</h3>
+        <p>We publish sourced research briefs and factual rebuttals — turning raw signals into material policymakers and journalists can actually use.</p>
+      </div>
+      <div class="card">
+        <div class="ico">🤝</div>
+        <h3>Convene</h3>
+        <p>We run Brussels briefings and closed-door sessions that connect policymakers, journalists and business leaders around shared, verified facts.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="flagship" class="alt">
+  <div class="wrap">
+    <div class="kicker2">Flagship programme</div>
+    <h2 class="sec">The Transatlantic Truth Lab.</h2>
+    <p class="intro">Our flagship initiative is an independent, journalist-led analytical center identifying information manipulation aimed at the U.S.–EU relationship — and countering it with verified, data-driven stories of transatlantic innovation, energy security and shared prosperity.</p>
+    <div class="flag" style="margin-top:30px">
+      <div>
+        <ul>
+          <li>540+ documented foreign information-manipulation incidents tracked in 2025</li>
+          <li>Flagship research briefs on information integrity, critical minerals and energy security</li>
+          <li>A four-step method: monitor → verify → publish → convene</li>
+          <li>Briefings that bring policymakers, journalists and business leaders to one table</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <span class="chip">Independent Analytical Center</span>
+        <h3>Transatlantic Truth Lab</h3>
+        <p>Brussels-based, data-forward, and built for policy audiences. Explore the research briefs, method and team.</p>
+        <a class="btn" href="https://alexmazuka.github.io/transatlantic-truth-lab/" target="_blank" rel="noopener">Visit the Truth Lab ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="insights">
+  <div class="wrap">
+    <div class="kicker2">Insights</div>
+    <h2 class="sec">From the field.</h2>
+    <p class="intro">Notes, briefings and research from our work across Europe.</p>
+    <div class="post" style="margin-top:30px">
+      <div class="thumb" style="background-image:url('assets/img/briefing-room.jpg')"></div>
+      <div class="body">
+        <div class="date">Brussels · Research Briefing</div>
+        <h3>“The war did not start in 2022”: taking eight years of evidence to a Brussels audience</h3>
+        <p>Our chair Vitaliy Sizov presented a research brief — <em>Before February 2022: How the West Actually Responded to Russia's War on Ukraine</em> — to an international audience of journalists and civil-society leaders, reconstructing the eight years of limited aid, quiet diplomacy and blocked weapons that preceded the full-scale invasion.</p>
+        <a href="blog/before-february-2022.html">Read the briefing note →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="leadership" class="alt">
+  <div class="wrap">
+    <div class="kicker2">Leadership</div>
+    <h2 class="sec">Who leads the work.</h2>
+    <div class="lead" style="margin-top:26px">
+      <div class="avatar">VS</div>
+      <div>
+        <h3>Vitaliy Sizov</h3>
+        <div class="role">Chair · DII-Global Europe</div>
+        <p>An EU-accredited broadcast journalist and analyst, Vitaliy Sizov leads DII-Global Europe and its flagship Transatlantic Truth Lab. He brings years of frontline reporting and open-source research on the war in Ukraine to briefings for European policymakers, journalists and civil society.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="kicker2">Contact</div>
+    <h2 class="sec">Work with us.</h2>
+    <p class="intro">For briefings, research partnerships, media requests or press accreditation — send a note and we'll get back to you.</p>
+    <div class="contact-grid">
+      <div class="cinfo">
+        <p><span class="lbl">Organisation</span>DII-Global Europe (VZW / ASBL)</p>
+        <p><span class="lbl">Registered office</span>Rue Godecharle 8, 1000 Ixelles<br>Brussels, Belgium</p>
+        <p><span class="lbl">Enterprise number</span>1000 847 483</p>
+        <p><span class="lbl">Flagship programme</span><a href="https://alexmazuka.github.io/transatlantic-truth-lab/" target="_blank" rel="noopener" style="color:#fff">Transatlantic Truth Lab ↗</a></p>
+      </div>
+      <form id="contact-form" action="https://formspree.io/f/xrewonjy" method="POST">
+        <div class="form-status" id="form-status"></div>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required placeholder="Your full name">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required placeholder="you@organisation.eu">
+        <label for="org">Organisation <span style="text-transform:none;font-weight:400;color:#8a97a8">(optional)</span></label>
+        <input type="text" id="org" name="organisation" placeholder="Where you're writing from">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required placeholder="How can we help?"></textarea>
+        <input type="hidden" name="_subject" value="New enquiry via DII-Global Europe website">
+        <button type="submit">Send message</button>
+        <div class="form-note">We reply to every genuine enquiry. Your details are only used to respond to you.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <div class="brand-f">DII<span>·</span>Global Europe</div>
+        <p>An independent Brussels-based non-profit defending information integrity across the transatlantic space. The European continuation of the Donetsk Institute of Information.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <p><a href="#about">About</a></p>
+        <p><a href="#flagship">Programmes</a></p>
+        <p><a href="#insights">Insights</a></p>
+        <p><a href="#contact">Contact</a></p>
+      </div>
+      <div>
+        <h4>Programme</h4>
+        <p><a href="https://alexmazuka.github.io/transatlantic-truth-lab/" target="_blank" rel="noopener">Transatlantic Truth Lab ↗</a></p>
+        <h4 style="margin-top:18px">Registered office</h4>
+        <p>Rue Godecharle 8<br>1000 Ixelles, Brussels, Belgium</p>
+      </div>
+    </div>
+    <div class="legal">
+      <span>© <span id="year"></span> DII-Global Europe (VZW / ASBL) · Enterprise No. 1000 847 483</span>
+      <span>Chaired by Vitaliy Sizov</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+// close mobile nav on link tap
+document.querySelectorAll('#nav a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nav').classList.remove('open')));
+// AJAX Formspree submit for inline confirmation
+var form = document.getElementById('contact-form');
+var status = document.getElementById('form-status');
+form.addEventListener('submit', async function(e){
+  e.preventDefault();
+  status.className = 'form-status';
+  var data = new FormData(form);
+  try{
+    var res = await fetch(form.action, {method:'POST', body:data, headers:{'Accept':'application/json'}});
+    if(res.ok){
+      form.reset();
+      status.textContent = 'Thank you — your message has been sent. We’ll be in touch shortly.';
+      status.className = 'form-status ok';
+    }else{
+      var d = await res.json().catch(()=>({}));
+      status.textContent = (d.errors && d.errors.map(x=>x.message).join(', ')) || 'Something went wrong. Please email us directly.';
+      status.className = 'form-status err';
+    }
+  }catch(err){
+    status.textContent = 'Network error. Please try again or email us directly.';
+    status.className = 'form-status err';
+  }
+  status.scrollIntoView({behavior:'smooth', block:'center'});
+});
+</script>
+</body>
+</html>
