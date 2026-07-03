@@ -99,6 +99,24 @@ p.intro{font-size:1.07rem;color:var(--muted);max-width:770px;margin-bottom:8px}
 .lead .role{font-family:'Segoe UI',sans-serif;color:var(--accent);font-size:.86rem;font-weight:600;margin:2px 0 10px;text-transform:uppercase;letter-spacing:.6px}
 .lead p{color:var(--muted);font-size:.98rem}
 
+/* newsletter */
+#newsletter{background:linear-gradient(135deg,#12385f,#1f4e79);color:#fff;padding:52px 0}
+.news-wrap{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+#newsletter .kicker2{color:var(--gold)}
+#newsletter h2{font-family:'Segoe UI',sans-serif;font-size:1.7rem;font-weight:800;line-height:1.18;margin-bottom:10px}
+#newsletter p{color:#cddbec;font-size:1rem;max-width:460px}
+.news-form{display:flex;gap:10px;flex-wrap:wrap}
+.news-form input[type=email]{flex:1;min-width:220px;padding:13px 15px;border:1px solid rgba(255,255,255,.25);border-radius:6px;font-family:'Segoe UI',sans-serif;font-size:.96rem;background:rgba(255,255,255,.08);color:#fff}
+.news-form input[type=email]::placeholder{color:#9fb6d4}
+.news-form input[type=email]:focus{outline:none;border-color:var(--gold);background:rgba(255,255,255,.14)}
+.news-form button{background:var(--gold);color:var(--navy);font-family:'Segoe UI',sans-serif;font-weight:700;border:0;padding:13px 26px;border-radius:6px;font-size:.95rem;cursor:pointer;white-space:nowrap}
+.news-form button:hover{opacity:.92}
+.news-note{font-family:'Segoe UI',sans-serif;font-size:.76rem;color:#9fb6d4;margin-top:12px}
+.news-status{display:none;font-family:'Segoe UI',sans-serif;font-size:.9rem;margin-top:12px;padding:10px 14px;border-radius:6px}
+.news-status.ok{display:block;background:rgba(29,122,77,.22);color:#a7e3c2;border:1px solid rgba(29,122,77,.5)}
+.news-status.err{display:block;background:rgba(178,34,52,.22);color:#f4b7bf;border:1px solid rgba(178,34,52,.5)}
+@media(max-width:820px){.news-wrap{grid-template-columns:1fr;gap:20px}}
+
 /* contact */
 #contact{background:linear-gradient(180deg,#0a2540,#12385f);color:#fff}
 #contact h2.sec{color:#fff}
@@ -148,6 +166,7 @@ footer .legal{border-top:1px solid rgba(255,255,255,.12);margin-top:30px;padding
       <a href="#focus">Focus</a>
       <a href="#flagship">Programs</a>
       <a href="#insights">Insights</a>
+      <a href="#newsletter">Subscribe</a>
       <a href="#contact">Contact</a>
       <a class="pill" href="https://alexmazuka.github.io/transatlantic-truth-lab/" target="_blank" rel="noopener">Truth Lab ↗</a>
     </nav>
@@ -257,6 +276,31 @@ footer .legal{border-top:1px solid rgba(255,255,255,.12);margin-top:30px;padding
   </div>
 </section>
 
+<section id="newsletter">
+  <div class="wrap">
+    <div class="news-wrap">
+      <div>
+        <div class="kicker2">Weekly digest</div>
+        <h2>Get the facts, once a week.</h2>
+        <p>Subscribe to our weekly digest — verified research, disinformation trends and briefing notes from across the transatlantic space, straight to your inbox.</p>
+      </div>
+      <div>
+        <form id="newsletter-form" action="https://formspree.io/f/xrewonjy" method="POST">
+          <div class="news-form">
+            <input type="email" id="news-email" name="email" required placeholder="you@organisation.eu" aria-label="Email address">
+            <input type="hidden" name="_subject" value="New weekly-digest subscription — DII-Global Europe">
+            <input type="hidden" name="form" value="Newsletter subscription (weekly digest)">
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+            <button type="submit">Subscribe</button>
+          </div>
+          <div class="news-status" id="news-status"></div>
+          <div class="news-note">Weekly. No spam. Unsubscribe anytime — your email is only used to send the digest.</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="contact">
   <div class="wrap">
     <div class="kicker2">Contact</div>
@@ -342,6 +386,29 @@ form.addEventListener('submit', async function(e){
     status.className = 'form-status err';
   }
   status.scrollIntoView({behavior:'smooth', block:'center'});
+});
+
+// Newsletter subscription (weekly digest)
+var nform = document.getElementById('newsletter-form');
+var nstatus = document.getElementById('news-status');
+nform.addEventListener('submit', async function(e){
+  e.preventDefault();
+  nstatus.className = 'news-status';
+  try{
+    var res = await fetch(nform.action, {method:'POST', body:new FormData(nform), headers:{'Accept':'application/json'}});
+    if(res.ok){
+      nform.reset();
+      nstatus.textContent = 'You’re subscribed — watch your inbox for the next weekly digest.';
+      nstatus.className = 'news-status ok';
+    }else{
+      var d = await res.json().catch(()=>({}));
+      nstatus.textContent = (d.errors && d.errors.map(x=>x.message).join(', ')) || 'Something went wrong. Please try again.';
+      nstatus.className = 'news-status err';
+    }
+  }catch(err){
+    nstatus.textContent = 'Network error. Please try again in a moment.';
+    nstatus.className = 'news-status err';
+  }
 });
 </script>
 </body>
