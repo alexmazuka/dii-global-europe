@@ -93,8 +93,9 @@ p.intro{font-size:1.07rem;color:var(--muted);max-width:770px;margin-bottom:8px}
 .post p{color:var(--muted);font-size:1rem;margin-bottom:16px}
 
 /* leadership */
-.lead{display:flex;gap:22px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:26px;max-width:760px}
-.lead .avatar{flex:0 0 84px;width:84px;height:84px;border-radius:50%;background:var(--navy) center/cover no-repeat;display:flex;align-items:center;justify-content:center;color:var(--gold);font-family:'Segoe UI',sans-serif;font-weight:700;font-size:1.6rem}
+.lead{display:flex;gap:24px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:26px;max-width:760px}
+.lead .avatar{flex:0 0 128px;width:128px;height:128px;border-radius:50%;background:var(--navy) center/cover no-repeat;border:3px solid var(--line);box-shadow:0 4px 16px rgba(10,37,64,.12)}
+@media(max-width:560px){.lead{flex-direction:column;align-items:center;text-align:center}.lead .avatar{flex-basis:110px;width:110px;height:110px}}
 .lead h3{font-family:'Segoe UI',sans-serif;color:var(--navy);font-size:1.2rem}
 .lead .role{font-family:'Segoe UI',sans-serif;color:var(--accent);font-size:.86rem;font-weight:600;margin:2px 0 10px;text-transform:uppercase;letter-spacing:.6px}
 .lead p{color:var(--muted);font-size:.98rem}
@@ -266,7 +267,7 @@ footer .legal{border-top:1px solid rgba(255,255,255,.12);margin-top:30px;padding
     <div class="kicker2">Leadership</div>
     <h2 class="sec">Who leads the work.</h2>
     <div class="lead" style="margin-top:26px">
-      <div class="avatar">VS</div>
+      <div class="avatar" style="background-image:url('assets/img/vitaliy.jpg')" role="img" aria-label="Portrait of Vitaliy Sizov"></div>
       <div>
         <h3>Vitaliy Sizov</h3>
         <div class="role">Chair · DII-Global Europe</div>
