@@ -1,6 +1,6 @@
 # DII-Global Europe
 
-Landing page for **DII-Global Europe** — a Brussels-based non-profit (VZW / ASBL) working on information integrity, independent journalism and countering foreign information manipulation across the transatlantic space. Chaired by Vitaliy Sizov.
+Landing page for **DII-Global Europe** — a Brussels-based non-profit (VZW / ASBL) working on information integrity, independent journalism and countering foreign information manipulation across the transatlantic space. Chaired by Vitaliy Syzov.
 
 The European continuation of the Donetsk Institute of Information.
 
