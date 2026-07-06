@@ -24,4 +24,4 @@ The contact form posts to [Formspree](https://formspree.io/) (`/f/xrewonjy`) wit
 
 ## Organisation
 
-DII-Global Europe (VZW / ASBL) · Rue Godecharle 8, 1000 Ixelles, Brussels, Belgium · Enterprise No. 1000 847 483
+DII-Global Europe (VZW / ASBL) · Rue Godecharle 8, 1000 Ixelles, Brussels, Belgium · Enterprise No. 1000 847 483 · office@diiglobal.eu
