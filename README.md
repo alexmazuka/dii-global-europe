@@ -10,9 +10,12 @@ Published via GitHub Pages: **https://alexmazuka.github.io/dii-global-europe/**
 
 ## Structure
 
-- `index.html` — single-page landing (About · Focus · Programmes · Insights · Contact)
+- `index.html` — single-page landing (About · Focus · Programmes · Research · Insights · Contact)
+- `research/nato-ankara-summit-2026-fimi-assessment.html` — shareable research page: FIMI assessment of the NATO Ankara Summit 2026, with embedded video and PDF download
 - `blog/before-february-2022.html` — first blog post: a Brussels research briefing
-- `assets/img/` — briefing photography
+- `assets/img/` — briefing photography, video poster, research cover
+- `assets/video/` — research video (compressed for web delivery)
+- `assets/pdf/` — full research PDFs
 
 ## Flagship programme
 
